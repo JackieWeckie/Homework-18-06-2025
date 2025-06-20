@@ -1,6 +1,5 @@
 package Model;
 
-
 import lombok.*;
 
 import java.util.List;
