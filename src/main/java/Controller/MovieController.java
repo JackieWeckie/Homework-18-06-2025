@@ -29,6 +29,7 @@ public class MovieController {
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<MovieApiResponse> firstResponse = restTemplate.getForEntity(url + 1, MovieApiResponse.class);
+
         if (!firstResponse.getStatusCode().is2xxSuccessful() || firstResponse.getBody() == null) {
             return ResponseEntity.status(404).body("Error: Movies not found");
         }
